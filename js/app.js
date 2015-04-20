@@ -4,6 +4,7 @@ $(function() {
 		$("#title").text("Hello World");
 	});
 
+	// handle the clicking of the first question
 	$(".q1").click(function(e) {
 
 		// clear any existing results
