@@ -34,9 +34,10 @@ $(function() {
 		$("#q" + nextPage).show();
 	});
 
-	// TODO add another page
+	// TODO add 2 more entries with any china facts
 	// TODO make the navbar red (#DE2910) + the logo yello (#FFDE00) and navigation links white (#fff)
 	// TODO add a back button
+	// TODO add a contact us page (and update all the links)
 
 });
 
