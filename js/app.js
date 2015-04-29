@@ -1,5 +1,7 @@
 $(function() {
 
+	var currentPage = 1;
+
 	$("#hello").click(function() {
 		$("#title").text("Hello World");
 	});
@@ -23,6 +25,18 @@ $(function() {
 		$("#question1").append(result);
 
 	});
+
+	$("#next").click(function() {
+
+		var nextPage = currentPage + 1;
+
+		$("#q" + currentPage).hide();
+		$("#q" + nextPage).show();
+	});
+
+	// TODO add another page
+	// TODO make the navbar red (#DE2910) + the logo yello (#FFDE00) and navigation links white (#fff)
+	// TODO add a back button
 
 });
 
