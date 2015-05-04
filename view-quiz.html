@@ -1,0 +1,44 @@
+<div ng-init="initialize()">
+
+	<div class="page-header">
+		<h1>Quiz</h1>
+	</div>
+
+	<div ng-show="q1">
+
+	<h3>What is the word for "entrepreneur" in Chinese?</h3>
+
+		<button type="button" class="btn btn-md btn-default q1" ng-click="a1(1)">学习 (xué xí)</button>
+		<button type="button" class="btn btn-md btn-default q1" ng-click="a1(2)">企业家 (qǐ yè jiā)</button>
+		<button type="button" class="btn btn-md btn-default q1" ng-click="a1(3)">业务 (yè wù)</button>
+
+		<div ng-show="resultPanel1" class="padding">
+			<div ng-show="result1" class="alert alert-success" role="alert"><strong>Yes!</strong> You are correct.</div>
+			<div ng-hide="result1" class="alert alert-danger" role="alert"><strong>Sorry!</strong> Not this time.</div>
+		</div>
+
+	</div>
+
+	<div ng-show="q2">
+
+		<h3>Did you know?</h3>
+		<h4>China Produces 8 billion pairs of socks a year!</h4>
+		<p>"About 8 billion pairs of socks are made annually in China's Datang District, also known as sock city. Datang, Zhuji produces 8 billion pairs of socks a year, which is equivalent to about a pair of socks per person on the planet in 2011." <a href="http://www.theguardian.com/business/2012/sep/09/sock-city-decline-china-economy" target="_blank">The Guardian</a></p>
+
+	</div>
+
+	<div ng-show="q3">
+		<h3>Lorem Ipsum</h3>
+		<p>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper.</p>
+	</div>
+
+	<div ng-show="q4">
+		<h3>More Lorem Ipsum</h3>
+		<p>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper.</p>
+	</div>
+
+	<hr>
+
+	<button ng-click="next()" class="btn btn-default btn-lg">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
+
+</div>
