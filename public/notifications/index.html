@@ -10,7 +10,7 @@
 
     <title>
       
-        Home &middot; 
+        Notifications &middot; 
       
     </title>
 
@@ -51,7 +51,7 @@
     <div class="navbar-collapse collapse" id="navbar-collapse-main">
 
         <ul class="nav navbar-nav hidden-xs">
-          <li class="active">
+          <li>
             <a href="/">Home</a>
           </li>
           <li>
@@ -66,7 +66,7 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
-          <li >
+          <li class="active">
             <a class="app-notifications" href="/notifications/">
               <span class="icon icon-bell"></span>
             </a>
@@ -356,114 +356,20 @@
   </div>
 </div>
 
-<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Users</h4>
-      </div>
-
-      <div class="modal-body p-a-0">
-        <div class="modal-body-scroller">
-          <ul class="media-list media-list-users list-group">
-            <li class="list-group-item">
-              <div class="media">
-                <a class="media-left" href="#">
-                  <img class="media-object img-circle" src="/assets/img/avatar-fat.jpg">
-                </a>
-                <div class="media-body">
-                  <button class="btn btn-default btn-sm pull-right">
-                    <span class="glyphicon glyphicon-user"></span> Follow
-                  </button>
-                  <strong>Jacob Thornton</strong>
-                  <p>@fat - San Francisco</p>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="media">
-                <a class="media-left" href="#">
-                  <img class="media-object img-circle" src="/assets/img/avatar-dhg.png">
-                </a>
-                <div class="media-body">
-                  <button class="btn btn-default btn-sm pull-right">
-                    <span class="glyphicon glyphicon-user"></span> Follow
-                  </button>
-                  <strong>Dave Gamache</strong>
-                  <p>@dhg - Palo Alto</p>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="media">
-                <a class="media-left" href="#">
-                  <img class="media-object img-circle" src="/assets/img/avatar-mdo.png">
-                </a>
-                <div class="media-body">
-                  <button class="btn btn-default btn-sm pull-right">
-                    <span class="glyphicon glyphicon-user"></span> Follow
-                  </button>
-                  <strong>Mark Otto</strong>
-                  <p>@mdo - San Francisco</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 <div class="container p-t-md">
   <div class="row">
     <div class="col-md-3">
-      <div class="panel panel-default panel-profile m-b-md">
-        <div class="panel-heading" style="background-image: url(/assets/img/iceland.jpg);"></div>
-        <div class="panel-body text-center">
-          <a href="/profile/">
-            <img
-              class="panel-profile-img"
-              src="/assets/img/avatar-dhg.png">
-          </a>
 
-          <h5 class="panel-title">
-            <a class="text-inherit" href="/profile/">Dave Gamache</a>
-          </h5>
-
-          <p class="m-b-md">I wish i was a little bit taller, wish i was a baller, wish i had a girl… also.</p>
-
-          <ul class="panel-menu">
-            <li class="panel-menu-item">
-              <a href="#userModal" class="text-inherit" data-toggle="modal">
-                Friends
-                <h5 class="m-y-0">12M</h5>
-              </a>
-            </li>
-
-            <li class="panel-menu-item">
-              <a href="#userModal" class="text-inherit" data-toggle="modal">
-                Enemies
-                <h5 class="m-y-0">1</h5>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="panel panel-default visible-md-block visible-lg-block">
-        <div class="panel-body">
-          <h5 class="m-t-0">About <small>· <a href="#">Edit</a></small></h5>
-          <ul class="list-unstyled list-spaced">
-            <li><span class="text-muted icon icon-calendar m-r"></span>Went to <a href="#">Oh, Canada</a>
-            <li><span class="text-muted icon icon-users m-r"></span>Became friends with <a href="#">Obama</a>
-            <li><span class="text-muted icon icon-github m-r"></span>Worked at <a href="#">Github</a>
-            <li><span class="text-muted icon icon-home m-r"></span>Lives in <a href="#">San Francisco, CA</a>
-            <li><span class="text-muted icon icon-location-pin m-r"></span>From <a href="#">Seattle, WA</a>
-          </ul>
-        </div>
+      <div class="list-group m-b-md">
+        <a href="#" class="list-group-item">
+          <span class="icon icon-chevron-thin-right pull-right"></span>
+          Notifications
+        </a>
+        <a href="#" class="list-group-item">
+          <span class="icon icon-chevron-thin-right pull-right"></span>
+          Mentions
+        </a>
       </div>
 
        <div class="panel panel-default visible-md-block visible-lg-block">
@@ -496,159 +402,235 @@
           </div>
         </div>
       </div>
+
+      <div class="panel panel-default visible-md-block visible-lg-block">
+        <div class="panel-body">
+          <h5 class="m-t-0">Trending Searches <small>· <a href="#">Change</a></small></h5>
+          <ul class="list-unstyled list-spaced">
+            <li><a href="#">#Bootstrap</a>
+            <li><a href="#">Mdo for pres</a>
+            <li><a href="#">#fatsux</a>
+            <li><a href="#">#buyme</a>
+            <li><a href="#">#designishard</a>
+            <li><a href="#">#helpawesomepeople</a>
+            <li><a href="#">#doawesomestuff</a>
+            <li><a href="#">Tom Brady</a>
+            <li><a href="#">Magna Carta</a>
+            <li><a href="#">Mark Otto</a>
+            <li><a href="#">Dave Gamache</a>
+            <li><a href="#">Jacob Thornton</a>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="col-md-6">
       <ul class="list-group media-list media-list-stream">
+        <li class="list-group-item p-a">
+          <h3 class="m-a-0">Notifications</h3>
+        </li>
 
-        <li class="media list-group-item p-a">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Message">
-            <div class="input-group-btn">
-              <button type="button" class="btn btn-default">
-                <span class="icon icon-camera"></span>
-              </button>
+        <li class="list-group-item media p-a">
+          <div class="media-left">
+            <span class="icon icon-globe text-muted"></span>
+          </div>
+
+          <div class="media-body">
+            <small class="pull-right text-muted">1 min</small>
+            <div class="media-heading">
+              <a href="#"><strong>Dave Gamache</strong></a> went traveling
             </div>
+
           </div>
         </li>
 
-        <li class="media list-group-item p-a">
-          <a class="media-left" href="#">
-            <img
-              class="media-object img-circle"
-              src="/assets/img/avatar-dhg.png">
-          </a>
+        <li class="list-group-item media p-a">
+          <div class="media-left">
+            <span class="icon icon-game-controller text-muted"></span>
+          </div>
+
           <div class="media-body">
+            <small class="pull-right text-muted">3 min</small>
             <div class="media-heading">
-              <small class="pull-right text-muted">4 min</small>
-              <h5>Dave Gamache</h5>
+              <a href="#"><strong>Mark Otto</strong></a> played destiny
             </div>
 
-            <p>
-              Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            </p>
+          </div>
+        </li>
 
-            <div class="media-body-inline-grid" data-grid="images">
-              <div style="display: none">
-                <img data-action="zoom" data-width="1050" data-height="700" src="/assets/img/unsplash_1.jpg">
-              </div>
+        <li class="list-group-item media p-a">
+          <div class="media-left">
+            <span class="icon icon-user text-muted"></span>
+          </div>
 
-              <div style="display: none">
-                <img data-action="zoom" data-width="640" data-height="640" src="/assets/img/instagram_1.jpg">
-              </div>
-
-              <div style="display: none">
-                <img data-action="zoom" data-width="640" data-height="640" src="/assets/img/instagram_13.jpg">
-              </div>
-
-              <div style="display: none">
-                <img data-action="zoom" data-width="1048" data-height="700" src="/assets/img/unsplash_2.jpg">
-              </div>
+          <div class="media-body">
+            <small class="pull-right text-muted">34 min</small>
+            <div class="media-heading">
+              <a href="#"><strong>Fat</strong></a> and <a href="#"><strong>1 other</strong></a> followed you
             </div>
-
-            <ul class="media-list m-b">
-              <li class="media">
-                <a class="media-left" href="#">
-                  <img
-                    class="media-object img-circle"
-                    src="/assets/img/avatar-fat.jpg">
-                </a>
-                <div class="media-body">
-                  <strong>Jacon Thornton: </strong>
-                  Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
-                </div>
-              </li>
-              <li class="media">
-                <a class="media-left" href="#">
-                  <img
-                    class="media-object img-circle"
-                    src="/assets/img/avatar-mdo.png">
-                </a>
-                <div class="media-body">
-                  <strong>Mark Otto: </strong>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                </div>
-              </li>
+            <ul class="avatar-list">
+              <li class="avatar-list-item"><img class="img-circle" src="/assets/img/avatar-fat.jpg">
+              <li class="avatar-list-item"><img class="img-circle" src="/assets/img/avatar-dhg.png">
             </ul>
           </div>
         </li>
 
-        <li class="media list-group-item p-a">
-          <a class="media-left" href="#">
-            <img
-              class="media-object img-circle"
-              src="/assets/img/avatar-fat.jpg">
-          </a>
-          <div class="media-body">
-            <div class="media-body-text">
-              <div class="media-heading">
-                <small class="pull-right text-muted">12 min</small>
-                <h5>Jacob Thornton</h5>
-              </div>
-              <p>
-                Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </div>
+        <li class="list-group-item media p-a">
+          <div class="media-left">
+            <span class="icon icon-camera text-muted"></span>
           </div>
-        </li>
 
-        <li class="media list-group-item p-a">
-          <a class="media-left" href="#">
-            <img
-              class="media-object img-circle"
-              src="/assets/img/avatar-mdo.png">
-          </a>
           <div class="media-body">
+            <small class="pull-right text-muted">3 min</small>
             <div class="media-heading">
-              <small class="pull-right text-muted">34 min</small>
-              <h5>Mark Otto</h5>
+              <a href="#"><strong>Dave Gamache</strong></a> uploaded a photo
             </div>
-
-            <p>
-              Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
 
             <div class="media-body-inline-grid" data-grid="images">
               <img style="display: none" data-width="640" data-height="640" data-action="zoom" src="/assets/img/instagram_3.jpg">
             </div>
+          </div>
+        </li>
 
-            <ul class="media-list">
-              <li class="media">
-                <a class="media-left" href="#">
-                  <img
-                    class="media-object img-circle"
-                    src="/assets/img/avatar-dhg.png">
-                </a>
-                <div class="media-body">
-                  <strong>Dave Gamache: </strong>
-                  Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
+        <li class="list-group-item media p-a">
+          <div class="media-left">
+            <span class="icon icon-flag text-muted"></span>
+          </div>
+
+          <div class="media-body">
+            <small class="pull-right text-muted">3 min</small>
+            <div class="media-heading">
+              <a href="#"><strong>Mark Otto</strong></a> flagged your post
+            </div>
+
+            <div class="panel panel-default m-t">
+              <div class="panel-body">
+                <div class="media">
+                  <a class="media-left" href="#">
+                    <img
+                      class="media-object img-circle"
+                      src="/assets/img/avatar-fat.jpg">
+                  </a>
+                  <div class="media-body">
+                    <div class="media-body-text">
+                      <div class="media-heading">
+                        <small class="pull-right text-muted">1 hr</small>
+                        <h5 class="m-b-0">Jacob Thornton</h5>
+                      </div>
+                      Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                  </div>
                 </div>
-              </li>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item media p-a">
+          <div class="media-left">
+            <span class="icon icon-heart text-muted"></span>
+          </div>
+
+          <div class="media-body">
+            <small class="pull-right text-muted">4 hr</small>
+            <div class="media-heading">
+              <a href="#"><strong>Mark Otto</strong></a> and <a href="#"><strong>2 others</strong></a> favorited your post
+            </div>
+            <ul class="avatar-list">
+              <li class="avatar-list-item"><img class="img-circle" src="/assets/img/avatar-dhg.png">
+              <li class="avatar-list-item"><img class="img-circle" src="/assets/img/avatar-mdo.png">
+              <li class="avatar-list-item"><img class="img-circle" src="/assets/img/avatar-fat.jpg">
             </ul>
+          </div>
+        </li>
+
+        <li class="list-group-item media p-a">
+          <div class="media-left">
+            <span class="icon icon-user text-muted"></span>
+          </div>
+
+          <div class="media-body">
+            <small class="pull-right text-muted">30 min</small>
+            <div class="media-heading">
+              You followed <a href="#"><strong>Jacob Thornton</strong></a> and <a href="#"><strong>1 other</strong></a>
+            </div>
+
+            <div class="m-t">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="panel panel-default panel-profile">
+                    <div class="panel-heading"
+                         style="background-image: url(/assets/img/instagram_4.jpg);"></div>
+                    <div class="panel-body text-center">
+                      <img class="panel-profile-img" src="/assets/img/avatar-fat.jpg">
+
+                      <h5 class="panel-title">Jacob Thornton</h5>
+                      <p class="m-b-md">Big belly rude boy, million dollar hustler. Unemployed.</p>
+
+                      <button class="btn btn-primary-outline btn-sm">
+                        <span class="icon icon-add-user"></span> Follow
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                 <div class="col-md-6">
+                  <div class="panel panel-default panel-profile">
+                    <div class="panel-heading"
+                         style="background-image: url(/assets/img/instagram_1.jpg);"></div>
+                    <div class="panel-body text-center">
+                      <img class="panel-profile-img" src="/assets/img/avatar-mdo.png">
+
+                      <h5 class="panel-title">Mark Otto</h5>
+                      <p class="m-b-md">GitHub and Bootstrap. Formerly at Twitter. Huge nerd.</p>
+
+                      <button class="btn btn-primary-outline btn-sm">
+                        <span class="icon icon-add-user"></span> Follow
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item media p-a">
+          <div class="media-left">
+            <span class="icon icon-cog text-muted"></span>
+          </div>
+
+          <div class="media-body">
+            <small class="pull-right text-muted">30 min</small>
+            <div class="media-heading">
+              <a href="#"><strong>Jacob Thornton</strong></a> and <a href="#"><strong>1 other</strong></a> updated their settings
+            </div>
+            <ul class="avatar-list">
+              <li class="avatar-list-item"><img class="img-circle" src="/assets/img/avatar-fat.jpg">
+              <li class="avatar-list-item"><img class="img-circle" src="/assets/img/avatar-dhg.png">
+            </ul>
+          </div>
+        </li>
+
+        <li class="list-group-item media p-a">
+          <div class="media-left">
+            <span class="icon icon-creative-commons-noncommercial-us text-muted"></span>
+          </div>
+
+          <div class="media-body">
+            <small class="pull-right text-muted">1 min</small>
+            <div class="media-heading">
+              <a href="#"><strong>Jacob Thornton</strong></a> quit his job
+            </div>
+
           </div>
         </li>
       </ul>
     </div>
     <div class="col-md-3">
-      <div class="alert alert-warning alert-dismissible hidden-xs" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <a class="alert-link" href="/profile">Visit your profile!</a> Check your self, you aren't looking too good.
-      </div>
-
       <div class="panel panel-default m-b-md hidden-xs">
         <div class="panel-body">
-          <h5 class="m-t-0">Sponsored</h5>
-          <div data-grid="images" data-target-height="150">
-            <img class="media-object" data-width="640" data-height="640" data-action="zoom" src="/assets/img/instagram_2.jpg">
-          </div>
-          <p><strong>It might be time to visit Iceland.</strong> Iceland is so chill, and everything looks cool here. Also, we heard the people are pretty nice. What are you waiting for?</p>
-          <button class="btn btn-primary-outline btn-sm">Buy a ticket</button>
-        </div>
-      </div>
-
-      <div class="panel panel-default m-b-md hidden-xs">
-        <div class="panel-body">
-        <h5 class="m-t-0">Likes <small>· <a href="#">View All</a></small></h5>
+        <h5 class="m-t-0">Active Users <small>· <a href="#">View All</a></small></h5>
         <ul class="media-list media-list-stream">
           <li class="media m-b">
             <a class="media-left" href="#">
@@ -685,8 +667,9 @@
         </div>
       </div>
 
-      <div class="panel panel-default panel-link-list">
-        <div class="panel-body">
+
+        <div class="panel panel-default">
+          <div class="panel-body">
           © 2015 Bootstrap
 
           <a href="#">About</a>
@@ -703,7 +686,7 @@
           <a href="#">Apps</a>
           <a href="#">Jobs</a>
           <a href="#">Advertise</a>
-        </div>
+          </div>
       </div>
     </div>
   </div>
