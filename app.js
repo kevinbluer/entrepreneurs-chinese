@@ -1,17 +1,24 @@
-// var http = require('http');
-// http.createServer(function (req, res) {
-//   res.writeHead(200, {'Content-Type': 'text/plain'});
-//   res.end('Hello World\n');
-// }).listen(1337, '127.0.0.1');
-// console.log('Server running at http://127.0.0.1:1337/');
+// include and setup express
+var express = require('express');
+var app = express();
 
-var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  var head, body, footer;
-  head = '<html><head><link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css"></head>';
-  body = '<body style="background-image: url(http://cdn.bluer.com/images/shanghai-skyline.jpg); background-size: cover;"><h2 style="color: white; text-align: center; font-family: Raleway;"><strong>Entrepreneur\'s</strong> Chinese</h2></body>';
-  footer = '</html>';
-  res.end(head + body + footer);
-}).listen(1337, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:1337/');
+// respond with "hello world" when a GET request is made to the homepage
+app.get('/', function(req, res) {
+  res.send('hello world');
+});
+
+// respond with "hello universe" when a GET request is made to the homepage
+app.get('/hello', function(req, res) {
+  res.send('hello universe');
+});
+
+// setup our public directory (which will serve any file stored in the 'public' directory)
+app.use(express.static('public'));
+
+// create the server based on express
+var server = require('http').createServer(app);
+
+// start the server
+server.listen(1337, '127.0.0.1', function () {
+  console.log('Express server listening on %d', 1337);
+});
