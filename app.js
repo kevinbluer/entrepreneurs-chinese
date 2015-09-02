@@ -11,13 +11,19 @@ var hbs = exphbs.create({defaultLayout: 'main'})	;
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+// respond with the home page
 app.get('/', function (req, res) {
     res.render('home');
 });
 
-// respond with "hello universe" when a GET request is made to the homepage
-app.get('/hello', function(req, res) {
-  res.send('hello universe');
+// respond with the about page
+app.get('/about', function(req, res) {
+  res.render('about');
+});
+
+// respond with the about page
+app.get('/register', function(req, res) {
+  res.render('register');
 });
 
 // setup our public directory (which will serve any file stored in the 'public' directory)
