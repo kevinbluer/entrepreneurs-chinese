@@ -1,5 +1,7 @@
 // include and setup express
 var express = require('express');
+var bodyParser = require('body-parser');
+
 // include express handlebars (templating engine)
 var exphbs  = require('express-handlebars');
 
@@ -9,6 +11,8 @@ var hbs = exphbs.create({defaultLayout: 'main'})	;
 
 // setup handlebars
 app.engine('handlebars', hbs.engine);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'handlebars');
 
 // respond with the home page
@@ -28,7 +32,7 @@ app.get('/register', function(req, res) {
 
 // handle the posted registration data
 app.post('/register', function(req, res) {
-  console.log('yo');
+  console.log(req.body);
   res.redirect('/quiz');
 });
 

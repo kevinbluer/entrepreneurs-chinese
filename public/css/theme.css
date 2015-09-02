@@ -20,16 +20,16 @@ body {
 /* Navigation style */
 
 .navbar-inverse {
-	background-image: linear-gradient(to bottom, #DE2910 0, #B41007 100%);
+	background-image: linear-gradient(to bottom, #D9260F 0, #B81208 100%);
 	border-color: #666666;
 }
 
 .navbar-inverse .navbar-brand {
-	color: #FFDE00 !important;
+	color: yellow !important;
 }
 
 .navbar-inverse .navbar-brand:hover {
-	color: #FFDE00;
+	color: orange;
 }
 
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
