@@ -21,9 +21,28 @@ app.get('/about', function(req, res) {
   res.render('about');
 });
 
-// respond with the about page
+// respond with the regster page
 app.get('/register', function(req, res) {
   res.render('register');
+});
+
+// handle the posted registration data
+app.post('/register', function(req, res) {
+  console.log('yo');
+  res.redirect('/quiz');
+});
+
+// respond with the quiz page (and pass in some data to the template)
+app.get('/quiz', function (req, res) {
+    res.render('quiz', {
+    	questions: [{
+		    title: "Hello",
+		    answer: "World!"
+		},{
+		    title: "Greetings",
+		    answer: "Universe!"
+		}]
+    });
 });
 
 // setup our public directory (which will serve any file stored in the 'public' directory)
