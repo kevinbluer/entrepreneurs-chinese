@@ -1,10 +1,18 @@
 // include and setup express
 var express = require('express');
+// include express handlebars (templating engine)
+var exphbs  = require('express-handlebars');
+
 var app = express();
 
-// respond with "hello world" when a GET request is made to the homepage
-app.get('/', function(req, res) {
-  res.send('hello world');
+var hbs = exphbs.create({defaultLayout: 'main'})	;
+
+// setup handlebars
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+app.get('/', function (req, res) {
+    res.render('home');
 });
 
 // respond with "hello universe" when a GET request is made to the homepage
