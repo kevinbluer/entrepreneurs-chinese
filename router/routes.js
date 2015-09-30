@@ -9,3 +9,7 @@ Router.route('/', function () {
 Router.route('/about', function () {
   this.render('about');
 });
+
+Router.route('/questions', function () {
+  this.render('questions');
+});
