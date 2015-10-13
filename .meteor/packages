@@ -9,6 +9,7 @@ autopublish
 insecure
 accounts-ui
 accounts-password
+accounts-facebook
 twbs:bootstrap
 iron:router
 fortawesome:fontawesome

@@ -1,4 +1,4 @@
-if (Meteor.isClient) {
+// if (Meteor.isClient) {
 
   Template.questions.helpers({
     questions: function () {
@@ -6,4 +6,4 @@ if (Meteor.isClient) {
     }
   });
 
-}
+// }

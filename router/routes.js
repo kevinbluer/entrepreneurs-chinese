@@ -11,5 +11,11 @@ Router.route('/about', function () {
 });
 
 Router.route('/questions', function () {
-  this.render('questions');
-});
+
+  if (! Meteor.userId()) {
+    this.render('login');
+  } else {
+    this.render('questions');
+  }
+  
+}); 
