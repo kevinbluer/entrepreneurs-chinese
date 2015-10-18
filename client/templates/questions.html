@@ -1,8 +1,3 @@
 <template name="questions">
-	<h2>Questions</h2>
-	<ul class="questions">
-	{{#each questions}}
-		<li>{{ title }}</li>
-	{{/each}}
-	</ul>
+	{{> Template.dynamic template=whichOne}}
 </template>

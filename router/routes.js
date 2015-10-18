@@ -10,12 +10,25 @@ Router.route('/about', function () {
   this.render('about');
 });
 
-Router.route('/questions', function () {
+Router.route('/questions/:moduleId', function () {
 
-  if (! Meteor.userId()) {
-    this.render('login');
+ 	Session.set("currentModule", "module" + this.params.moduleId);
+	this.render('questions');
+  
+}, {
+	name: 'module'
+}); 
+
+Router.route('/dashboard', function () {
+
+  if (Meteor.userId()) {
+    this.render('dashboard');
   } else {
-    this.render('questions');
+    this.render('login');
   }
   
 }); 
+
+Router.route('leaderboard', function () {
+	this.render('leaderboard');
+});

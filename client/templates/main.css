@@ -1,6 +1,5 @@
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 50px;
 }
 
 .navbar {
@@ -8,10 +7,31 @@ body {
   background-color: #DE2910;
 }
 
-.navbar-default .navbar-nav > li > a {
+.jumbotron.welcome {
+	margin-top: 20px;
+	padding: 30px;
+}
+
+.jumbotron.welcome h1 {
+	margin-top: 0px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
 	color: #fff;
+}
+
+.navbar-inverse {
+	border-color: #CE5E4E;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+	color: #FEDE00;
 }
 
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
 	color: #FEDE00;
+}
+
+footer p {
+	color: #777777;
 }

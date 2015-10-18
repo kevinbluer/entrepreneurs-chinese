@@ -1,9 +1,8 @@
 <template name="main">
-	<div class="container">
 
       <!-- Static navbar -->
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
@@ -11,13 +10,18 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><i class="fa fa-star"></i> Entrepreneur's Chinese</a>
+            <a class="navbar-brand" href="/"><i class="fa fa-star"></i> Entrepreneur's Chinese</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/questions">Questions</a></li>
+              {{#unless isLoggedIn}}
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+              {{/unless}}
+              {{#if isLoggedIn}}
+                <li><a href="/dashboard"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+                <li><a href="/leaderboard"><i class="fa fa-list"></i> Leaderboard</a></li>
+              {{/if}}
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a>{{> loginButtons }}</a></li>
@@ -27,12 +31,13 @@
       </nav>
 
       <!-- Main component for a primary marketing message or call to action -->
-	  {{> yield}}
+      <div class="container">
+        {{> yield}}
 
-	  <hr />
-
-	  <p>Copyright &copy; Entrepreneur's Chinese 2015.</p>
-
-    </div> <!-- /container -->
+        <footer>
+          <hr>
+          <p align="center">Copyright &copy; Entrepreneur's Chinese 2015</p>
+        </footer>
+      </div>
 
 </template>

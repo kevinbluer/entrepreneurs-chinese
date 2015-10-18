@@ -1,8 +1,8 @@
 // if (Meteor.isClient) {
 
   Template.questions.helpers({
-    questions: function () {
-      return questions.find();
+    whichOne: function () {
+      return Session.get('currentModule');
     }
   });
 
