@@ -10,6 +10,7 @@ insecure
 accounts-ui
 accounts-password
 accounts-github
+accounts-google
 accounts-facebook
 twbs:bootstrap
 iron:router
