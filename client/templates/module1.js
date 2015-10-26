@@ -3,7 +3,7 @@ if (Meteor.isClient) {
 	Session.set("moduleProgress", 5);
 
 	// show / hide the appropriate panel
-	// save the progress to the user's account
+	// save the progress to the user's account (make this a global attribute that is visible througout the app)
 
 	Template.module1.helpers({
 		progress: function() {
@@ -18,11 +18,20 @@ if (Meteor.isClient) {
 
 			Session.set("moduleProgress", progress + 5);
 
-			// Update user progress (and score)
-		      // Tasks.insert({
-		      //   text: text,
-		      //   createdAt: new Date() // current time
-		      // });
+			$("#section1").hide();
+			$("#section2").show();
 		}
 	})
+
+	Template.module1.events({
+		"click #back2": function() {
+
+			var progress = Session.get("moduleProgress");
+
+			Session.set("moduleProgress", progress - 5);
+
+			$("#section1").show();
+			$("#section2").hide();
+		}
+	})	
 }
