@@ -20,6 +20,11 @@ Router.route('/settings', function () {
 
 });
 
+Router.route('/user/:username', function () {
+  
+  
+});
+
 Router.route('/questions/:moduleId', function () {
 
  	Session.set("currentModule", "module" + this.params.moduleId);

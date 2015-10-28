@@ -5,13 +5,10 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
-accounts-ui
+ian:accounts-ui-bootstrap-3
 accounts-password
-accounts-github
-accounts-google
 accounts-facebook
 twbs:bootstrap
 iron:router
 fortawesome:fontawesome
+meteortoys:allthings
