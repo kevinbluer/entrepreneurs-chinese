@@ -5,6 +5,9 @@ if (Meteor.isClient) {
 		},
 		"click #module2": function (event) {
 			Router.go('module', { moduleId: 2 })
+		},
+		"click #module6": function (event) {
+			Router.go('module', { moduleId: 6})
 		}
 	});
 }
