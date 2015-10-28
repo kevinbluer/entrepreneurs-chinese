@@ -1,0 +1,17 @@
+<template name="module5">
+	<h2>Module 5</h2>
+	<p>Learn about China's main exports and some simple introductory greetings and phrases.</p>
+	<div class="progress">
+	  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
+	    0%
+	  </div>
+	</div>
+	<h3>Some Facts and Figures</h3>
+	<p>Below is a map of China, officially known as the People's Republic of China (or PRC). It is the world's most populous country, with a population of over 1.35 billion. China borders 14 nations, more than any other country except Russia, which also borders 14. These include Vietnam, Laos, and Myanmar (Burma), India, Bhutan, Nepal, Pakistan, Afghanistan, Tajikistan, Kyrgyzstan and Kazakhstan, Mongolia, and North Korea.</p>
+	<img src="/images/china-map.svg" style="width: 100%;">
+	<ul class="questions">
+	{{#each questions}}
+		<li>{{ title }}</li>
+	{{/each}}
+	</ul>
+</template>
