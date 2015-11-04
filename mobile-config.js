@@ -7,6 +7,8 @@ App.info({
   version: '1.0'
 });
 
+App.accessRule('https://*.stripe.com/*');
+
 App.icons({
   // iOS
   'iphone': 'resources/icons/icon-60.png',
