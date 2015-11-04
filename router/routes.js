@@ -1,13 +1,13 @@
-Meteor.startup(function() {
-    Stripe.setPublishableKey('pk_XZCT7SYmh77wm762uBc3PgN3YPSCo');
-});
+// Meteor.startup(function() {
+//     Stripe.setPublishableKey('pk_XZCT7SYmh77wm762uBc3PgN3YPSCo');
+// });
 
-Meteor.startup(function() {
-    var handler = StripeCheckout.configure({
-        key: 'pk_XZCT7SYmh77wm762uBc3PgN3YPSCo',
-        token: function(token) {}
-    });
-});
+// Meteor.startup(function() {
+//     var handler = StripeCheckout.configure({
+//         key: 'pk_XZCT7SYmh77wm762uBc3PgN3YPSCo',
+//         token: function(token) {}
+//     });
+// });
 
 Router.configure({
 	layoutTemplate: 'main'
@@ -33,7 +33,7 @@ Router.route('/settings', function () {
 
 Router.route('/user/:username', function () {
   
-  
+  this.render('profile');
 });
 
 Router.route('/questions/:moduleId', function () {
