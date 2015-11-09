@@ -58,3 +58,13 @@ Router.route('/dashboard', function () {
 Router.route('leaderboard', function () {
 	this.render('leaderboard');
 });
+
+Router.route('/upgrade', function () {
+
+  if (Meteor.userId()) {
+    this.render('upgrade');
+  } else {
+    this.render('login');
+  }
+  
+}); 
