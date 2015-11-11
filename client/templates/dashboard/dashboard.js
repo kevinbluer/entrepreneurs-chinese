@@ -12,7 +12,7 @@ if (Meteor.isClient) {
 					$set: { 'profile.modules.one' : 1 }
 				});
 				Session.set("moduleOneProgress", 1);
-				
+
 			} else {
 
 				Session.set("moduleOneProgress", user && user.profile && user.profile.modules.one);
@@ -31,6 +31,10 @@ if (Meteor.isClient) {
 			var user = Meteor.user();
 
 			return user && user.profile && user.profile.modules;
+		},
+
+		calculateProgress: function(progress) {
+			return progress * 20;
 		}
 	});
 }

@@ -7,8 +7,8 @@
 	  <div class="panel-body">
 	  	<p>Learn about China's main exports and some simple introductory greetings and phrases.</p>
 	    <div class="progress">
-		  <div class="progress-bar" role="progressbar" aria-valuenow="{{ modules.one }}" aria-valuemin="0" aria-valuemax="100" style="width: {{#unless modules.one}}5{{else}}{{modules.one}}{{/unless}}%;">
-		    {{#unless modules.one}}0{{else}}{{modules.one}}{{/unless}}%
+		  <div class="progress-bar" role="progressbar" aria-valuenow="{{ modules.one }}" aria-valuemin="0" aria-valuemax="100" style="width: {{#unless modules.one}}5{{else}}{{calculateProgress modules.one}}{{/unless}}%;">
+		    {{#unless modules.one}}0{{else}}{{calculateProgress modules.one}}{{/unless}}%
 		  </div>
 		</div>
 		<a class="btn btn-primary pull-right margin-left" role="button" id="module1">Begin &raquo;</a>
