@@ -21,6 +21,22 @@ if (Meteor.isClient) {
 			Router.go('module', { moduleId: 1 });
 		},
 		"click #module2": function (event) {
+
+			var user = Meteor.user();
+
+			// if the user has never started the module, adjust the progress to started
+			if (!user.profile.modules.two) {
+
+				Meteor.users.update( { _id: Meteor.userId() }, { 
+					$set: { 'profile.modules.two' : 1 }
+				});
+				Session.set("moduleTwoProgress", 1);
+
+			} else {
+
+				Session.set("moduleTwoProgress", user && user.profile && user.profile.modules.two);
+			}
+
 			Router.go('module', { moduleId: 2 })
 		}
 	});

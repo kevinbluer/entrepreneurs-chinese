@@ -19,6 +19,7 @@
                 <li><a href="/about">About</a></li>
               {{/unless}}
               {{#if isLoggedIn}}
+                <li><a href="/user/{{userName}}"><i class="fa fa-user"></i> You</a></li>
                 <li><a href="/dashboard"><i class="fa fa-tachometer"></i> Dashboard</a></li>
                 <li><a href="/leaderboard"><i class="fa fa-list"></i> Leaderboard <span class="badge">{{#unless userScore}}0{{else}}{{userScore}}{{/unless}}</span></a></li>
                 <li><a href="/settings"><i class="fa fa-cog"></i> Settings</a></li>

@@ -4,7 +4,7 @@ Meteor.publish("userData", function () {
 
 Meteor.publish("userProfile",function(username){
     // simulate network latency by sleeping 2s
-    Meteor._sleepForMs(2000);
+    // Meteor._sleepForMs(2000);
     // try to find the user by username
     var user = Meteor.users.findOne({
         username: username

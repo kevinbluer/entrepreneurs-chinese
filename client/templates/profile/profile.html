@@ -3,10 +3,10 @@
 		<div class="col-lg-12 col-sm-12">
 		    <div class="card hovercard">
 		        <div class="card-background">
-		            <img class="card-bkimg" alt="" src="/images/kevin.jpg">
+		            <img class="card-bkimg" alt="" src="/images/china-flag.jpg">
 		        </div>
 		        <div class="useravatar">
-		            <img alt="" src="/images/kevin.jpg">
+		            <img alt="" src="/images/china-flag.jpg">
 		        </div>
 		        <div class="card-info"> <span class="card-title">{{ profile.firstName }} {{ profile.lastName }}</span>
 
@@ -14,17 +14,17 @@
 		    </div>
 		    <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
 		        <div class="btn-group" role="group">
-		            <button type="button" id="comments" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+		            <button type="button" id="comments" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+		                <div class="hidden-xs">Profile</div>
+		            </button>
+		        </div>
+		        <div class="btn-group" role="group">
+		            <button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
 		                <div class="hidden-xs">Comments</div>
 		            </button>
 		        </div>
 		        <div class="btn-group" role="group">
-		            <button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-		                <div class="hidden-xs">Bookmarks</div>
-		            </button>
-		        </div>
-		        <div class="btn-group" role="group">
-		            <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+		            <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
 		                <div class="hidden-xs">Following</div>
 		            </button>
 		        </div>
@@ -33,10 +33,12 @@
 		    <div class="well">
 		      <div class="tab-content">
 		        <div class="tab-pane fade in active" id="tab1">
-		          <h3>Comments</h3>
+		          <h3>{{ profile.firstName }} {{ profile.lastName }}</h3>
+		          <p>{{ profile.about }}</p>
+		          <p class="bg-danger" style="padding: 15px; border-radius: 5px;">My current score is: {{ profile.score }} :)</p>
 		        </div>
 		        <div class="tab-pane fade in" id="tab2">
-		          <h3>Bookmarks</h3>
+		          <h3>Comments</h3>
 		        </div>
 		        <div class="tab-pane fade in" id="tab3">
 		          <h3>Following</h3>

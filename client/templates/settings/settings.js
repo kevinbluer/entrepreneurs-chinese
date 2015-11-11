@@ -1,12 +1,14 @@
 if (Meteor.isClient) {
 	Template.settings.helpers({
 
-		email: function(){
-	        return Meteor.user().emails[0];
+		email: function() {
+			var user = Meteor.user();
+	        return user && user.emails[0];
 	    },
 
-	    user: function(){
-	        return Meteor.user().profile;
+	    user: function() {
+	    	var user = Meteor.user();
+	        return user && user.profile;
 	    }
 	})
 
@@ -18,7 +20,8 @@ if (Meteor.isClient) {
 			Meteor.users.update( { _id: Meteor.userId() }, { 
 				$set: { 
 					'profile.firstName': $("#inputFirstName").val(),
-					'profile.lastName': $("#inputLastName").val()
+					'profile.lastName': $("#inputLastName").val(),
+					'profile.about': $("#inputAbout").val()
 				}
 			});
 

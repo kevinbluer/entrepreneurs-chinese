@@ -1,19 +1,21 @@
 if (Meteor.isClient) {
 
-
-	if (Meteor.user()) {
-		Session.set("userScore", Meteor.user().profile.score);
-	}
-
 	Template.main.helpers({
-	    isLoggedIn: function(){
+	    isLoggedIn: function() {
 	        return Meteor.userId();
 	    },
-
 	    userScore: function() {
 	        return Session.get("userScore");
+	    },
+	    userName: function() {
+	    	var user = Meteor.user();
+	    	return user && user.username;
+	    },
+	    userScore: function() {
+	    	var user = Meteor.user();
+	    	return user && user.profile.score;
 	    }
-	})
+	});
 
 	Accounts.ui.config({
 	    requestPermissions: {},
