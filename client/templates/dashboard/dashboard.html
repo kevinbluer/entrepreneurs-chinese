@@ -7,8 +7,8 @@
 	  <div class="panel-body">
 	  	<p>Learn about China's main exports and some simple introductory greetings and phrases.</p>
 	    <div class="progress">
-		  <div class="progress-bar" role="progressbar" aria-valuenow="{{ modules.one }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ modules.one }}%;">
-		    {{ modules.one }}%
+		  <div class="progress-bar" role="progressbar" aria-valuenow="{{ modules.one }}" aria-valuemin="0" aria-valuemax="100" style="width: {{#unless modules.one}}5{{else}}{{modules.one}}{{/unless}}%;">
+		    {{#unless modules.one}}0{{else}}{{modules.one}}{{/unless}}%
 		  </div>
 		</div>
 		<a class="btn btn-primary pull-right margin-left" role="button" id="module1">Begin &raquo;</a>
@@ -17,16 +17,16 @@
 	</div>
 
 	<div class="panel panel-default">
-	  <div class="panel-heading">2.0 Doing Business in China</div>
+	  <div class="panel-heading">2.0 China's History</div>
 	  <div class="panel-body">
-	  	<p>Learn about China's business climate and numbers, currency, and how to say thanks.</p>
+	  	<p>Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper.</p>
 	    <div class="progress">
-		  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
-		    0%
+		  <div class="progress-bar" role="progressbar" aria-valuenow="{{ modules.two }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ modules.two }}%;">
+		    {{ modules.two }}%
 		  </div>
 		</div> 
-		<a class="btn btn-primary pull-right margin-left" role="button" id="module2" disabled>Begin &raquo;</a>
-		<a class="btn btn-default pull-right" role="button" disabled>Review</a>
+		<a class="btn btn-primary pull-right margin-left" role="button" id="module2">Begin &raquo;</a>
+		<a class="btn btn-default pull-right" role="button">Review</a>
 	  </div>
 	</div>
 
@@ -35,13 +35,69 @@
 	  <div class="panel-body">
 	  	<p>Learn about China's largest companies and considerations when doing business.</p>
 	    <div class="progress">
-		  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
-		    0%
+		  <div class="progress-bar" role="progressbar" aria-valuenow="{{ modules.three }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ modules.three }}%;">
+		    {{ modules.three }}%
+		  </div>
+		</div> 
+		<a class="btn btn-primary pull-right margin-left module" role="button">Begin &raquo;</a>
+		<a class="btn btn-default pull-right" role="button">Review</a>
+	  </div>
+	</div>
+
+	<div class="panel panel-default">
+	  <div class="panel-heading">4.0 Discover China's Main Import and Exports</div>
+	  <div class="panel-body">
+	  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, asperiores et, blanditiis, dolor nihil saepe architecto inventore temporibus voluptate impedit ratione voluptatibus reprehenderit id deleniti error eligendi quos ipsam nam.</p>
+	    <div class="progress">
+		  <div class="progress-bar" role="progressbar" aria-valuenow="{{ modules.four }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ modules.four }}%;">
+		    {{ modules.four }}%
 		  </div>
 		</div> 
 		<a class="btn btn-primary pull-right margin-left module" role="button" disabled>Begin &raquo;</a>
 		<a class="btn btn-default pull-right" role="button" disabled>Review</a>
 	  </div>
-	</div>	
+	</div>		
+
+	<div class="panel panel-default">
+	  <div class="panel-heading">5.0 China's Languages</div>
+	  <div class="panel-body">
+	  	<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+	    <div class="progress">
+		  <div class="progress-bar" role="progressbar" aria-valuenow="{{ modules.five }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ modules.five }}%;">
+		    {{ modules.five }}%
+		  </div>
+		</div> 
+		<a class="btn btn-primary pull-right margin-left module" role="button" disabled>Begin &raquo;</a>
+		<a class="btn btn-default pull-right" role="button" disabled>Review</a>
+	  </div>
+	</div>		
+
+	<div class="panel panel-default">
+	  <div class="panel-heading">6.0 China's Celebrity and Gossip Culture</div>
+	  <div class="panel-body">
+	  	<p>Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	    <div class="progress">
+		  <div class="progress-bar" role="progressbar" aria-valuenow="{{ modules.six }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ modules.six }}%;">
+		    {{ modules.six }}%
+		  </div>
+		</div> 
+		<a class="btn btn-primary pull-right margin-left module" role="button" disabled>Begin &raquo;</a>
+		<a class="btn btn-default pull-right" role="button" disabled>Review</a>
+	  </div>
+	</div>		
+
+	<div class="panel panel-default">
+	  <div class="panel-heading">7.0 Overview of Intellectual Property Rights</div>
+	  <div class="panel-body">
+	  	<p>Since its entry into the World Trade Organization in 2001, China has gradually strengthened its laws to protect intellectual property rights ("IPR") in line with international standards.</p>
+	    <div class="progress">
+		  <div class="progress-bar" role="progressbar" aria-valuenow="{{ modules.seven }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ modules.seven }}%;">
+		    {{ modules.seven }}%
+		  </div>
+		</div> 
+		<a class="btn btn-primary pull-right margin-left module" role="button" disabled>Begin &raquo;</a>
+		<a class="btn btn-default pull-right" role="button" disabled>Review</a>
+	  </div>
+	</div>					
 	
 </template>

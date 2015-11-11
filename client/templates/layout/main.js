@@ -1,5 +1,6 @@
 if (Meteor.isClient) {
 
+
 	if (Meteor.user()) {
 		Session.set("userScore", Meteor.user().profile.score);
 	}
@@ -17,6 +18,19 @@ if (Meteor.isClient) {
 	Accounts.ui.config({
 	    requestPermissions: {},
 	    extraSignupFields: [{
+	        fieldName: 'username',
+	        fieldLabel: 'Username',
+	        inputType: 'text',
+	        visible: true,
+	        validate: function(value, errorFunction) {
+	          if (!value) {
+	            errorFunction("Please provide a username");
+	            return false;
+	          } else {
+	            return true;
+	          }
+	        }
+	    },{
 	        fieldName: 'firstName',
 	        fieldLabel: 'First name',
 	        inputType: 'text',
@@ -51,7 +65,7 @@ if (Meteor.isClient) {
 	            checked: 'checked'
 	        }],
 	        visible: true
-	    },	{
+	    }, {
 	        fieldName: 'terms',
 	        fieldLabel: 'I accept the terms and conditions',
 	        inputType: 'checkbox',

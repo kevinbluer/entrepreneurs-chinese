@@ -31,15 +31,19 @@ Router.route('/settings', function () {
 
 });
 
-Router.route('/user/:username', function () {
-  
-  this.render('profile');
+Router.route('/user/:username', {
+  name: "profile",
+  controller: "ProfileController"
 });
 
 Router.route('/questions/:moduleId', function () {
 
+  if (Meteor.userId()) {
+
  	Session.set("currentModule", "module" + this.params.moduleId);
 	this.render('questions');
+
+  }
   
 }, {
 	name: 'module'

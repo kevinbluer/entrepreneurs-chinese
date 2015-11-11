@@ -1,3 +1,28 @@
 <template name="module2">
 	<h2>Module 2</h2>
+	<h4>Learn about China's main exports and some simple introductory greetings and phrases.</h4>
+	<div class="progress">
+	  <div class="progress-bar" role="progressbar" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ progress }}%;">
+	    {{ progress }}%
+	  </div>
+	</div>
+
+	<div id="section1">
+		<h3>1. Facts and Figures</h3>
+		<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+		<p>Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+
+		<a class="btn btn-primary disabled" role="button" id="back1">&laquo; Back</a>
+		<a class="btn btn-primary" role="button" id="next1">Next &raquo;</a>
+	</div>
+
+	<div id="section2" style="display: none;">
+		<h3>2. China in Numbers</h3>
+		<p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+		<p>Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Donec sed odio dui.</p>
+
+		<a class="btn btn-primary" role="button" id="back2">&laquo; Back</a>
+		<a class="btn btn-primary" role="button" id="complete">Next &raquo;</a>
+	</div>
 </template>

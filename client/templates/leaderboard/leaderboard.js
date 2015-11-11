@@ -10,6 +10,9 @@ if (Meteor.isClient) {
 	Template.leaderboard.helpers({
 		leaderboard: function() {
 			return Meteor.users.find();
+		},
+		isCurrentUser: function() {
+			return this.username === Meteor.user().username;
 		}
 	})
 }
